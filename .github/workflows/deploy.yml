@@ -33,7 +33,7 @@ jobs:
           if (-not $hasTitle) {
             throw "Required title is missing"
           }
-    deploy:
+  deploy:
     needs: validate
     runs-on: ubuntu-latest
     permissions:
