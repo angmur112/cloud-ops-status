@@ -21,18 +21,13 @@ jobs:
       - name: Validate required files and title
         shell: pwsh
         run: |
-          if (-not (Test-Path -Path "./index.html" -PathType Leaf)) {
-            throw "index.html is missing"
-          }
-
-          if (-not (Test-Path -Path "./styles.css" -PathType Leaf)) {
-            throw "styles.css is missing"
-          }
-
-          $hasTitle = Select-String -Path "./index.html" -Pattern "<title>Cloud Operations Status</title>" -SimpleMatch -Quiet
-          if (-not $hasTitle) {
-            throw "Required title is missing"
-          }
+                    if (-not (Test-Path -Path "./index.html" -PathType Leaf)) { throw "index.html is missing" }
+                    if (-not (Test-Path -Path "./styles.css" -PathType Leaf)) { throw "styles.css is missing" }
+                    if (-not (Test-Path -Path "./maintenance.html" -PathType Leaf)) { throw "maintenance.html is missing" }
+                    $hasTitle = Select-String -Path "./index.html" -Pattern "<title>Cloud Operations Status</title>" -SimpleMatch -Quiet
+                    if (-not $hasTitle) { throw "Required title is missing" }
+                    $hasRunbookHeading = Select-String -Path "./maintenance.html" -Pattern "<h1>Maintenance Runbook</h1>" -SimpleMatch -Quiet
+                    if (-not $hasRunbookHeading) { throw "Required runbook heading is missing" }
   deploy:
     needs: validate
     runs-on: ubuntu-latest

@@ -7,53 +7,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <p class="eyebrow">Cloud Operations</p>
-    <h1>Service Status Dashboard</h1>
-    <p class="intro">A lightweight view of the services that keep our platform running.</p>
-    <div class="summary" role="status">
-      <span class="summary-dot" aria-hidden="true"></span>
-      All systems operational
-    </div>
-  </header>
-
-  <main>
-        <section class="services" aria-labelledby="services-heading">
-      <h2 id="services-heading">Production services</h2>
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-heading">
-            <h3>Public API</h3>
-            <span class="status operational">Operational</span>
-          </div>
-          <p>Requests are being served normally.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-heading">
-            <h3>Customer Portal</h3>
-            <span class="status operational">Operational</span>
-          </div>
-          <p>Sign-in and dashboard traffic are healthy.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-heading">
-            <h3>Notification Worker</h3>
-            <span class="status operational">Operational</span>
-          </div>
-          <p>Queued notifications are processing normally.</p>
-        </article>
-      </div>
-    </section>
-    <section class="deployment-note" aria-labelledby="deployment-heading">
-      <h2 id="deployment-heading">Deployment status</h2>
-      <p>Last deployment: automated through GitHub Actions.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Built to demonstrate a validate-then-deploy delivery pipeline.</p>
-  </footer>
+  <header class="hero"><p class="eyebrow">Cloud Operations</p><h1>Service Status Dashboard</h1><p class="intro">A lightweight view of the services that keep our platform running.</p><div class="summary" role="status"><span class="summary-dot" aria-hidden="true"></span>All systems operational</div></header>
+  <main><section class="services" aria-labelledby="services-heading"><h2 id="services-heading">Production services</h2><div class="service-grid"><article class="service-card"><div class="service-heading"><h3>Public API</h3><span class="status operational">Operational</span></div><p>Requests are being served normally.</p></article><article class="service-card"><div class="service-heading"><h3>Customer Portal</h3><span class="status operational">Operational</span></div><p>Sign-in and dashboard traffic are healthy.</p></article><article class="service-card"><div class="service-heading"><h3>Notification Worker</h3><span class="status operational">Operational</span></div><p>Queued notifications are processing normally.</p></article></div></section><section class="deployment-note" aria-labelledby="deployment-heading"><h2 id="deployment-heading">Deployment status</h2><p>Last deployment: automated through GitHub Actions.</p><a class="runbook-link" href="maintenance.html">Open maintenance runbook</a></section></main>
+  <footer><p>Built to demonstrate a validate-then-deploy delivery pipeline.</p></footer>
 </body>
 </html>
