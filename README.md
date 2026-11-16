@@ -1,5 +1,3 @@
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://nextwork.ai/static/nextwork-logo-paper.svg" /><img src="https://nextwork.ai/static/nextwork-logo-leather.svg" alt="NextWork" width="300" /></picture>
-
 # Deploy an Operations Status Dashboard
 
 **Project Link:** [View Project](https://nextwork.ai/projects/59bdd861-94df-4575-a1ca-10766f41bdf4)
